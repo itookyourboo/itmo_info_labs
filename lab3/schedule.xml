@@ -1,0 +1,23 @@
+<Schedule>
+    <Day>
+        <DayName>Пятница</DayName>
+        <Lesson>
+            <Time>10:00-11:30</Time>
+            <Week>четная неделя</Week>
+            <Room>403 ауд.</Room>
+            <Building>Кронверкский пр., д.49, лит.А</Building>
+            <Subject>ДИСКРЕТНАЯ МАТЕМАТИКА(ПРАК)</Subject>
+            <Teacher>Поляков Владимир Иванович</Teacher>
+            <Format>Очно - дистанционный</Format>
+        </Lesson>
+        <Lesson>
+            <Time>11:40-13:10</Time>
+            <Week>четная неделя</Week>
+            <Room>403 ауд.</Room>
+            <Building>Кронверкский пр., д.49, лит.А</Building>
+            <Subject>ДИСКРЕТНАЯ МАТЕМАТИКА(ПРАК)</Subject>
+            <Teacher>Поляков Владимир Иванович</Teacher>
+            <Format>Очно - дистанционный</Format>
+        </Lesson>
+    </Day>
+</Schedule>
