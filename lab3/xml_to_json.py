@@ -36,8 +36,10 @@ def parse_without_libs():
     tabs = 0
     add('{', tabs)
     tabs += 1
-    add('"Schedule": [', tabs)
+    add('"Schedule": {', tabs)
     for n, day in enumerate(schedule1):
+        tabs += 1
+        add('"Day": [', tabs)
         tabs += 1
         add('{', tabs)
         tabs += 1
@@ -56,7 +58,9 @@ def parse_without_libs():
         tabs -= 1
         add('}' + ('' if n == len(schedule1) - 1 else ','), tabs)
         tabs -= 1
-    add(']', tabs)
+        add(']' + ('' if n == len(schedule1) - 1 else ','), tabs)
+        tabs -= 1
+    add('}', tabs)
     tabs -= 1
     add('}', tabs)
 
