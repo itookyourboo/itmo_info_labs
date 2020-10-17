@@ -2,7 +2,7 @@ from time import time
 
 
 def parse_without_libs():
-    schedule = {'Schedule': []}
+    schedule = {'Schedule': {"Day": []}}
 
     def get_value(line):
         return line[line.index('>') + 1:line.index('</')]
@@ -12,7 +12,7 @@ def parse_without_libs():
 
     lesson_tags = ['Time', 'Week', 'Room', 'Building', 'Subject', 'Teacher', 'Format']
 
-    schedule1 = schedule['Schedule']
+    schedule1 = schedule['Schedule']["Day"]
     for line in lines:
         if 'Schedule' in line:
             continue
@@ -72,8 +72,6 @@ def parse_with_libs():
     import xmltodict
     import json
 
-    s = time()
-
     with open('schedule.xml', encoding='utf8') as file:
         data = xmltodict.parse(file.read())
 
@@ -86,9 +84,11 @@ for i in range(10):
     start = time()
     parse_without_libs()
     total_without = time() - start
+
     start = time()
     parse_with_libs()
     total_with = time() - start
+
     print(f'{total_without}\t{("<", ">")[total_without > total_with]}\t{total_with}')
 
 # 	Without libs				With libs
