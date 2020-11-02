@@ -13,7 +13,9 @@ NOT_CONSONANT = f'[{vowels + other}{(vowels + other).upper()}]'
 consonants = 'бвгджзйклмнпрстфхцчшщ'
 CONSONANT = f'[{consonants}{consonants.upper()}]'
 
-REG_EXP = f'\\b(\w*{VOWEL}{{2}}\w*)\\b\W\\b(?:{VOWEL}|(?:{NOT_CONSONANT}*{CONSONANT}){{1,3}}{NOT_CONSONANT}*)\\b'
+REG_EXP = f'\\b(\w*{VOWEL}{{2}}\w*)\\b\W+\\b(?:{VOWEL}|(?:{NOT_CONSONANT}*{CONSONANT}){{1,3}}{NOT_CONSONANT}*)\\b'
+
+print(REG_EXP)
 
 tests = [
     'Кривошеее существо гуляет по парку',
